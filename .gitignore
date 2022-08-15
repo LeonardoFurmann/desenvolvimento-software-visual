@@ -50,3 +50,15 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+Ex2/bin/Debug/net5.0/Ex2.deps.json
+Ex2/bin/Debug/net5.0/Ex2.runtimeconfig.dev.json
+Ex2/bin/Debug/net5.0/Ex2.runtimeconfig.json
+Ex2/obj/Debug/net5.0/Ex2.assets.cache
+Ex2/obj/Debug/net5.0/Ex2.AssemblyInfoInputs.cache
+Ex2/obj/Debug/net5.0/Ex2.csproj.AssemblyReference.cache
+Ex2/obj/Debug/net5.0/Ex2.csproj.CoreCompileInputs.cache
+Ex2/obj/Debug/net5.0/Ex2.genruntimeconfig.cache
+Ex2/obj/Ex2.csproj.nuget.dgspec.json
+Ex2/obj/project.assets.json
+*.json
+*.cache
