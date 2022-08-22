@@ -1,4 +1,6 @@
-﻿namespace Ex3
+﻿using System;
+
+namespace Ex3
 {
     class Program
     {
