@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace ExCadastro
 {
@@ -34,7 +35,7 @@ namespace ExCadastro
 
                      opcao = int.Parse(Console.ReadLine());
                     }
-                    catch(exception e){
+                    catch(Exception e){
 
                     }
                     
@@ -54,13 +55,13 @@ namespace ExCadastro
                                 Console.WriteLine("A senha não confere");
                             } else{
 
-                            cadastrar();
+                            // cadastrar();
                             }
 
                         break;
 
                         case 2:
-                            logar();
+                         //   logar();
                         break;
 
                         case 3:
