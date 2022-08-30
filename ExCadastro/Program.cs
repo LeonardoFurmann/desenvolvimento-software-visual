@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Security.Cryptography;
 
 namespace ExCadastro
 {
@@ -10,15 +11,37 @@ namespace ExCadastro
 
             String usuarios = File.ReadAllText("cadastro.txt");
 
+            
+                if(usuarios.Contains(username)){
+                    Console.WriteLine("Usuário já cadastrado");
+                 } else {
 
-            // TODO verificar se user ja existe
-
-            usuarios += "/n" + username + "=" + password;
+             usuarios += "/n" + username + " = "  + password;
 
             File.WriteAllText("cadastro.txt", usuarios);
 
           //  File.AppendAllText("cadastro.txt", usuarios + "=" + password);
+                   
+                 }
+       
         }
+
+    static void logar(){
+        Console.WriteLine("Digite um nome de usuário");
+        String username = Console.ReadLine();
+        Console.WriteLine("Digite uma senha");
+        String password = Console.ReadLine();
+
+         String usuarios = File.ReadAllText("cadastro.txt");
+
+            
+                if(usuarios.Contains(username) && usuarios.Contains(password)){
+                    Console.WriteLine("Entrou!");
+                 } else {
+                    Console.WriteLine("Usuário não encontrado");
+        }
+
+    }
         static void Main(string[] args)
         {
             Console.WriteLine("Olá");
@@ -26,6 +49,10 @@ namespace ExCadastro
             Console.WriteLine("Digite 2 para logar");
             Console.WriteLine("Digite 3 para sair");
                 bool sair = false;
+
+                var sha = SHA256.Create();
+                // Byte[] hash = sha.ComputeHash("");
+                // String h = BitConverter.ToString(hash);
 
                 while(!sair){
                     
@@ -55,13 +82,15 @@ namespace ExCadastro
                                 Console.WriteLine("A senha não confere");
                             } else{
 
-                            // cadastrar();
+                            cadastrar(username, password);
                             }
 
                         break;
 
                         case 2:
-                         //   logar();
+
+                           logar();
+
                         break;
 
                         case 3:
