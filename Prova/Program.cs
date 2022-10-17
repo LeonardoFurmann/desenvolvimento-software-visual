@@ -201,10 +201,12 @@ namespace Prova1
             bool serveAlimento;
             bool funciona;
             bool quiosqueJaAtribuido = false;
+
             foreach (Bloco bloco in Blocos)
             {
                 foreach (Quiosque quiosque in Quiosques)
                 {
+                    
                     if (quiosque.ServeBebida && bloco.AlimentoPreferido.Equals("Bebida"))
                     {
                         serveAlimento = true;
@@ -221,6 +223,8 @@ namespace Prova1
                     {
                         serveAlimento = false;
                     }
+
+
                     if (quiosque.Horario.Equals(bloco.Horario) || bloco.Horario.Equals("Ambos"))
                     {
                         funciona = true;
@@ -229,6 +233,7 @@ namespace Prova1
                     {
                         funciona = false;
                     }
+                    
                     foreach (Alocacao alocacao in Alocacoes)
                     {
                         if (alocacao.EmpresaQuiosque.Equals(quiosque.Empresa))
@@ -241,6 +246,7 @@ namespace Prova1
                             quiosqueJaAtribuido = false;
                         }
                     }
+                   
                     if (serveAlimento && funciona && bloco.NumeroQuiosques < 2 && quiosqueJaAtribuido == false)
                     {
                         Alocacoes.Add(new Alocacao(quiosque.Empresa, bloco.Cor));
