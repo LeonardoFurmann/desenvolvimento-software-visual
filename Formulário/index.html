@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="form-cadastro">
+        <input onblur="validaNome(this)" onfocus="resetInput(this)" id="nome-completo" placeholder="Nome Completo" type="text"></input>
+        <input id="data-nascimento" placeholder="Data de nascimento" type="date"></input>
+        <input onblur="validaCep(this)" id="cep" placeholder="CEP"type="number"></input>
+        <input id="logradouro" placeholder="Logradouro" type="text"></input>
+
+        <div style="display: flex;">
+            <input id="numero" placeholder="Número" type="number" style="margin-right: 5px;"></input>
+            <input id="complemento" placeholder="Complemento" type="text" style="margin-left: 5px;"></input>
+        </div>
+       
+        <input id = "telefone" placeholder="Telefone" type="text"></input>
+        <input id = "email" placeholder="Email" type="text"></input>
+        <input onblur="validaPassword(this)" id = "novo-password" placeholder="Senha" type="password"></input>
+        <input onblur="confirmaPassword(this)"id = "confirma-password" placeholder="Confirmar Senha" type="password"></input>
+        <button onclick="cadastrar()">Cadastrar</button>
+    </div>
+</body>
+</html>

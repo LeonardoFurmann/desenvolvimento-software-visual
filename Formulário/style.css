@@ -1,0 +1,37 @@
+*{
+    font-family: "Verdana", sans-serif;
+}
+
+#form-cadastro{
+    box-shadow: 0 0 1px 0;
+    position: relative;
+    margin: 50px auto 50px auto;
+    max-width: 320px;
+    padding: 30px;
+    text-align: center;
+}
+
+#form-cadastro input{
+    background: #dddddd;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+    outline: 0;
+    padding: 20px;
+    width: 100%;
+}
+
+#form-cadastro button{
+    background: #ff4d4d;
+    border: 0;
+    color: #ffffff;
+    font-size: 14px;
+    outline: 0;
+    padding: 20px;
+    width: 100%;
+}
+
+#form-cadastro button:active{
+    background: #db4444;
+}
